@@ -10,19 +10,17 @@ class DocsViseta extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(360, 690),
-      minTextAdapt: true,
-      splitScreenMode: true,
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Docs Viseta',
-        initialRoute: Routes.onBoardingScreen,
-        theme: ThemeData(
-          primaryColor: ColorsManager.kPrimaryColor,
-          scaffoldBackgroundColor: Colors.white,
-          // textTheme: Typography.englishLike2018.apply(fontSizeFactor: 1.sp),
-        ),
-      ),
-    );
+        designSize: const Size(375, 812),
+        minTextAdapt: true,
+        child: MaterialApp(
+          title: 'Doc App',
+          theme: ThemeData(
+            primaryColor: ColorsManager.kPrimaryColor,
+            scaffoldBackgroundColor: Colors.white,
+          ),
+          debugShowCheckedModeBanner: false,
+          initialRoute:  Routes.onBoardingScreen,
+          onGenerateRoute: appRouter.generateRoute,
+        ),);
   }
 }
